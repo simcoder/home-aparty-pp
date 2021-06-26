@@ -1,0 +1,25 @@
+{
+  "hosting": {
+    "site": "mirabella-party",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/people/**",
+        "function": "app"
+      },
+      {
+        "source": "/drinks/**",
+        "function": "app"
+      }
+    ]
+  }
+}
